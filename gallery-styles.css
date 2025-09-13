@@ -1,0 +1,283 @@
+/* Gallery-specific styles for individual collection pages */
+
+/* Gallery Grid - 2 pictures per row */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-image-container {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background-color: #f8f9fa;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.02);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-medium {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Collection Description Section */
+.collection-description {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.description-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.description-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Image Modal for Full Size Viewing */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 2rem;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.close-modal:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design for Gallery Pages */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .gallery-info {
+        padding: 1.5rem;
+    }
+    
+    .gallery-title {
+        font-size: 1.3rem;
+    }
+    
+    .image-modal {
+        padding: 1rem;
+    }
+    
+    .close-modal {
+        top: -30px;
+        font-size: 1.5rem;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        gap: 1.5rem;
+    }
+    
+    .gallery-info {
+        padding: 1rem;
+    }
+    
+    .gallery-title {
+        font-size: 1.1rem;
+    }
+    
+    .gallery-medium {
+        font-size: 0.9rem;
+    }
+    
+    .description-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Special styling for different collections */
+.hero-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Batman collection specific styling */
+body:has(.hero-title:contains("Batman")) .hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+}
+
+/* Rolling Stones collection specific styling */
+body:has(.hero-title:contains("Rolling Stones")) .hero {
+    background: linear-gradient(135deg, #8B0000 0%, #FF4500 100%);
+}
+
+/* The Who collection specific styling */
+body:has(.hero-title:contains("The Who")) .hero {
+    background: linear-gradient(135deg, #4169E1 0%, #1E90FF 100%);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .gallery-item,
+    .gallery-image,
+    .gallery-overlay {
+        transition: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .gallery-item {
+        border: 2px solid #000;
+    }
+    
+    .gallery-overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* Focus styles for keyboard navigation */
+.view-btn:focus,
+.close-modal:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Print styles for gallery pages */
+@media print {
+    .gallery-overlay,
+    .view-btn,
+    .close-modal {
+        display: none;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .gallery-item {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .gallery-image-container {
+        aspect-ratio: 1;
+    }
+}

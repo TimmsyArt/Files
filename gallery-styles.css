@@ -6,7 +6,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     margin-top: 2rem;
-    max-width: 1000px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -65,10 +65,10 @@
 }
 
 .gallery-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Old English Text MT', 'Blackletter', serif;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: #169B62;
     margin-bottom: 0.5rem;
 }
 
@@ -99,7 +99,7 @@
 
 /* Active Navigation Link */
 .nav-link.active {
-    color: #2c3e50;
+    color: #169B62;
     font-weight: 600;
 }
 
@@ -218,17 +218,17 @@
 
 /* Batman collection specific styling */
 body:has(.hero-title:contains("Batman")) .hero {
-    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+    background: linear-gradient(135deg, #169B62 0%, #0d6b3f 100%);
 }
 
 /* Rolling Stones collection specific styling */
 body:has(.hero-title:contains("Rolling Stones")) .hero {
-    background: linear-gradient(135deg, #8B0000 0%, #FF4500 100%);
+    background: linear-gradient(135deg, #169B62 0%, #0d6b3f 100%);
 }
 
 /* The Who collection specific styling */
 body:has(.hero-title:contains("The Who")) .hero {
-    background: linear-gradient(135deg, #4169E1 0%, #1E90FF 100%);
+    background: linear-gradient(135deg, #169B62 0%, #0d6b3f 100%);
 }
 
 /* Accessibility improvements */
@@ -254,7 +254,7 @@ body:has(.hero-title:contains("The Who")) .hero {
 /* Focus styles for keyboard navigation */
 .view-btn:focus,
 .close-modal:focus {
-    outline: 2px solid #667eea;
+    outline: 2px solid #169B62;
     outline-offset: 2px;
 }
 

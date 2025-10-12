@@ -1,0 +1,21 @@
+Timmsy's website instructions
+
+I wish to create a website which will be hosted on GitHub and deployed on Netlify
+
+I would like the website to emulate this website in the style it is presented:  https://www.shelbydawnsmith.com/shop.
+
+The picture I wish to use are stored at:  https://github.com/TimmsyArt/Files/tree/TimmsyArt-patch-1 and are listed as follows:
+
+OIP.jpg
+OIP2.jpg
+OIP3.jpg
+OIP4.jpg
+OIP5.jpg
+The Rolling Stones 1.jpg
+The Rolling Stones 2.jpg
+The Rolling Stones 3.jpg
+The Who 1.jpg
+The Who 2.jpg
+
+
+The HTML and CSS files will be located at the following location:  https://github.com/TimmsyArt/Files/tree/main

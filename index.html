@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timmsy's Art - Art Gallery</title>
+    <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Timmsy Art</h1>
+            <nav class="nav">
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="batman.html" class="nav-link">Batman vs Joker</a>
+                <a href="rolling-stones.html" class="nav-link">Rolling Stones</a>
+                <a href="the-who.html" class="nav-link">The Who</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Timmsy's Contemporary Art Collection</h2>
+                <p class="hero-subtitle">Discover unique artworks and creative expressions</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="section-title">Art Gallery</h2>
+                <div class="collection-grid">
+                    <a href="batman.html" class="collection-item">
+                        <div class="collection-image-container">
+                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/OIP.jpg" alt="Batman vs The Joker Collection" class="collection-image">
+                            <div class="collection-overlay">
+                                <span class="collection-link-text">View Collection</span>
+                            </div>
+                        </div>
+                        <div class="collection-info">
+                            <h3 class="collection-title">Batman vs The Joker</h3>
+                            <p class="collection-description">The eternal battle between hero and villain</p>
+                        </div>
+                    </a>
+
+                    <a href="rolling-stones.html" class="collection-item">
+                        <div class="collection-image-container">
+                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/The Rolling Stones 1.jpg" alt="The Rolling Stones Collection" class="collection-image">
+                            <div class="collection-overlay">
+                                <span class="collection-link-text">View Collection</span>
+                            </div>
+                        </div>
+                        <div class="collection-info">
+                            <h3 class="collection-title">The Rolling Stones</h3>
+                            <p class="collection-description">Capturing the essence of rock and roll legends</p>
+                        </div>
+                    </a>
+
+                    <a href="the-who.html" class="collection-item">
+                        <div class="collection-image-container">
+                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/The Who 1.jpg" alt="The Who Collection" class="collection-image">
+                            <div class="collection-overlay">
+                                <span class="collection-link-text">View Collection</span>
+                            </div>
+                        </div>
+                        <div class="collection-info">
+                            <h3 class="collection-title">The Who</h3>
+                            <p class="collection-description">Celebrating the pioneers of rock opera</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About the Artist</h2>
+                <div class="about-content">
+                    <p>Welcome to Timmsy's Art, a collection of contemporary artworks crafted using a range of traditional techniques. Each piece is carefully crafted to evoke emotion and inspire creativity.</p>
+                    <p>The collection features a diverse range of styles, from abstract contemporary pieces to iconic music-inspired artwork, all created with passion and attention to detail.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <p>For inquiries about artwork or general questions, please reach out to us.</p>
+                    <div class="contact-info">
+                        <p>Email: TimmsyNo1@iCloud.com</p>
+                        <p>Follow us on social media for updates on new pieces and exhibitions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 LD Gallery / Timmsy's Art. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add hover effects for art items
+        document.querySelectorAll('.art-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,61 @@
+Tasks for Wednesday 1st October
+
+1.  Review all documents in the folder before doing any thing.  You must be fully versed in all aspects of the work to date and why we are in the current position. 
+
+1st Oct Target: 3 jobs applied for by 12.30pm using Python/AI and the cover letter and CV resources I have already deposited in the folder.
+
+2.  Primary Tasks this morning
+
+3.  Database:
+3.1 Move the table "job_applications" from the Mydb database over to the new "MyJobApps" database
+3.2 Change the HTML job application code to direct it towards the job_applications table in the "MyJobApps" database.  
+3.3 Create a separate database table for "Auto_Job_Mgmt" - this is where the programs will manage send the JSON jobs identified in the queries, the storage and ongoing management of job applications.  
+3.4 Create a primary key within "Auto_Job_Mgmt" - which will start at 10,000 and move consecutively upwards.  The primary key maximum length of 5 digits.
+3.5 Capture the Adzuna/Reed or other website key Job Reference Code
+3.6 Change the job description field in the table to capture 5 key points of surrounding the "Job Description"  - this information may follow the following description headings as examples:
+- What We’re Looking For:
+- The ideal candidate will have:
+- The Role:
+- Skills required
+- Ideal Candidate
+3.7 Job Description: store the 5 key job description points within the database and use bullet points or to clearly separate the 5 points within the table entry for the specific job.
+
+4. Job Search Tasks
+Perform 2 searches using the Adzuna and Reed searches: (1) "Work from Home" and  (2) "Contractor"
+
+5.1 Job Location 
+Search:  London (not outside London). 
+
+6. Job Selection
+6.1  Select 2 jobs from "Work from Home" search that I have the highest probability of being offered the jobs
+6.2  Select 2 jobs from "Contractor" search that I have the highest probability of being offered the jobs
+
+7. Administration:
+When the query searches find a suitable role, allocate a sequential number, associated with the database table primary key. This sequential number must be mirrored on the JSON output.  It will also be used as a reference on each cover letter and CV dispatched when applying for jobs.  I wish to be able to cross-reference all documentation associated with job applications.  Copies of the job application cover letters and CVs should be saved and must include the primary key value in the title of the document as well as a short abbreviation of the role and hiring company.
+
+8. Adapting Cover Letter and CV
+Using the 5 core elements of Job Description, alter the cover letter (using the examples provided) to incorporate aspects of the job description demonstrating I am a match for the role.  The ensure my CV is altered (reasonably and truthfully) to incorporate job descriptions.
+
+9. Review
+When the cover letters and CVs have been updated for each of the 4 roles, prepare a review session and I will examine the documents.  When I have given authorisation for the documents, then you can proceed with completing the application process and automation can be demonstrated.
+
+
+
+
+
+
+
+
+
+
+Accumulate all results in a single JSON and a table within the existing Job Tracker MySQL Database
+
+Searches:
+
+Merge Reed and Adzuna scrapers and use the combined scraper for the following cateogories:
+
+Remote Jobs ONLY:
+Adzuna
+Reed
+
+Contract and Interim Roles:

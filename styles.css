@@ -187,11 +187,12 @@ body {
 .hero {
     background: linear-gradient(135deg, #169B62 0%, #0d6b3f 100%);
     color: white;
-    padding: 3.2rem 0; /* Reduced by 20% from 4rem */
+    padding: 0; /* Remove padding to let flexbox handle centering */
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: 200px; /* Ensure adequate height for vertical centering */
 }
 
@@ -553,7 +554,8 @@ body {
     }
     
     .hero {
-        padding: 2.4rem 0; /* Reduced by 20% from 3rem */
+        padding: 0; /* Remove padding to let flexbox handle centering */
+        min-height: 150px; /* Smaller height for mobile */
     }
     
     .hero-title {

@@ -43,7 +43,7 @@ body {
 
 .logo {
     font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
-    font-size: 2.4rem; /* Increased by 20% from 2rem */
+    font-size: 3.4rem; /* increase again from 2.4rem */
     font-weight: 700;
     color: #169B62;
     text-decoration: none;

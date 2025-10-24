@@ -31,7 +31,7 @@ body {
 
 .header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 20px;
     flex-direction: row-reverse;
@@ -44,7 +44,7 @@ body {
 
 .logo {
     font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
-    font-size: 4.4rem; /* increased from 4rem to 4.4rem */
+    font-size: 5.0rem; /* increased from 4.4rem to 5rem */
     font-weight: 700;
     color: #169B62;
     text-decoration: none;
@@ -60,13 +60,16 @@ body {
     color: #169B62;
     background-color: transparent;
     border: 2px solid #169B62;
-    padding: 0.5rem 1rem; /* Reduced padding to move it left */
+    padding: 0.4rem 0.8rem; /* Further reduced padding */
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-left: -10px; /* Move further left */
+    position: absolute;
+    left: 20px; /* Position absolutely on the left */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .menu-toggle:hover {

@@ -552,7 +552,7 @@ body {
     .logo {
         text-align: left;
         flex: none;
-        font-size: 4.5rem; /* Match desktop size */
+        font-size: 2.4rem; /* Keep original mobile size */
     }
 }
 

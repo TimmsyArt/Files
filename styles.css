@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 20px;
+    padding: 0.8rem 20px; /* Reduced by 20% from 1rem */
     flex-direction: row-reverse;
     position: relative;
 }
@@ -187,8 +187,12 @@ body {
 .hero {
     background: linear-gradient(135deg, #169B62 0%, #0d6b3f 100%);
     color: white;
-    padding: 4rem 0;
+    padding: 3.2rem 0; /* Reduced by 20% from 4rem */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px; /* Ensure adequate height for vertical centering */
 }
 
 .hero-title {
@@ -539,7 +543,7 @@ body {
     .logo {
         text-align: left;
         flex: none;
-        font-size: 4.4rem; /* Match desktop size increase */
+        font-size: 5.0rem; /* Match desktop size increase */
     }
 }
 
@@ -549,7 +553,7 @@ body {
     }
     
     .hero {
-        padding: 3rem 0;
+        padding: 2.4rem 0; /* Reduced by 20% from 3rem */
     }
     
     .hero-title {

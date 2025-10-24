@@ -510,8 +510,8 @@ body {
     }
     
     .menu-toggle {
-        font-size: 0.9rem;
-        padding: 0.4rem 1.2rem;
+        font-size: 0.7rem; /* Smaller font for mobile */
+        padding: 0.3rem 0.8rem; /* Reduced padding for mobile */
     }
     
     .hero-title {

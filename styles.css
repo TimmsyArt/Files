@@ -316,6 +316,13 @@ body {
     line-height: 1.5;
 }
 
+/* Center Miscellaneous Collection */
+.miscellaneous-centered {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 400px;
+}
+
 .art-item {
     background-color: #fff;
     border-radius: 8px;

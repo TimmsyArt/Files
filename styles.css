@@ -43,10 +43,12 @@ body {
 
 .logo {
     font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
-    font-size: 2rem;
+    font-size: 2.4rem; /* Increased by 20% from 2rem */
     font-weight: 700;
     color: #169B62;
     text-decoration: none;
+    text-align: center;
+    flex: 1;
 }
 
 /* Menu Toggle Button */
@@ -526,6 +528,13 @@ body {
     
     .main {
         margin-top: 120px;
+    }
+    
+    /* Mobile logo styling - keep left aligned but increase font size */
+    .logo {
+        text-align: left;
+        flex: none;
+        font-size: 2.4rem; /* Same 20% increase as desktop */
     }
 }
 

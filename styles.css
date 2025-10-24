@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.8rem 20px; /* Reduced by 20% from 1rem */
+    padding: 0.5rem 20px; /* Further reduced from 0.8rem to 0.5rem */
     flex-direction: row-reverse;
     position: relative;
 }
@@ -44,7 +44,7 @@ body {
 
 .logo {
     font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
-    font-size: 5.0rem; /* increased from 4.4rem to 5rem */
+    font-size: 4.5rem; /* Slightly reduced from 5.0rem for more compact header */
     font-weight: 700;
     color: #169B62;
     text-decoration: none;
@@ -187,13 +187,21 @@ body {
 .hero {
     background: linear-gradient(135deg, #169B62 0%, #0d6b3f 100%);
     color: white;
-    padding: 0; /* Remove padding to let flexbox handle centering */
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 200px; /* Ensure adequate height for vertical centering */
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem 20px; /* Add some padding back for breathing room */
 }
 
 .hero-title {
@@ -544,7 +552,7 @@ body {
     .logo {
         text-align: left;
         flex: none;
-        font-size: 5.0rem; /* Match desktop size increase */
+        font-size: 4.5rem; /* Match desktop size */
     }
 }
 
@@ -554,8 +562,11 @@ body {
     }
     
     .hero {
-        padding: 0; /* Remove padding to let flexbox handle centering */
         min-height: 150px; /* Smaller height for mobile */
+    }
+    
+    .hero .container {
+        padding: 1.5rem 15px; /* Smaller padding for mobile */
     }
     
     .hero-title {

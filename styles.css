@@ -35,6 +35,7 @@ body {
     align-items: center;
     padding: 1rem 20px;
     flex-direction: row-reverse;
+    position: relative;
 }
 
 .header-container {
@@ -43,7 +44,7 @@ body {
 
 .logo {
     font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
-    font-size: 3.4rem; /* increase again from 2.4rem */
+    font-size: 4.4rem; /* increased from 4rem to 4.4rem */
     font-weight: 700;
     color: #169B62;
     text-decoration: none;
@@ -54,17 +55,18 @@ body {
 /* Menu Toggle Button */
 .menu-toggle {
     font-family: 'Copperplate Gothic Bold', 'Copperplate', serif;
-    font-size: 1rem;
+    font-size: 0.8rem; /* Reduced by 20% from 1rem */
     font-weight: bold;
     color: #169B62;
     background-color: transparent;
     border: 2px solid #169B62;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem; /* Reduced padding to move it left */
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-left: -10px; /* Move further left */
 }
 
 .menu-toggle:hover {
@@ -188,7 +190,7 @@ body {
 
 .hero-title {
     font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
-    font-size: 3rem;
+    font-size: 2.2rem; /* Reduced to be smaller than header */
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -534,7 +536,7 @@ body {
     .logo {
         text-align: left;
         flex: none;
-        font-size: 2.4rem; /* Same 20% increase as desktop */
+        font-size: 4.4rem; /* Match desktop size increase */
     }
 }
 

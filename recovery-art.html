@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Art Collection - Healing & Transformation Art | Timmsy's Art</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Timmsy's Recovery Art collection featuring artwork inspired by hope, healing, and transformation. Contemporary art celebrating resilience and personal growth.">
+    <meta name="keywords" content="Recovery art, healing art, transformation art, hope art, resilience art, healing journey, personal growth, contemporary art, mixed media, inspirational art">
+    <meta name="author" content="Timmsy's Art">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Recovery Art Collection - Healing & Transformation Art | Timmsy's Art">
+    <meta property="og:description" content="Explore Timmsy's Recovery Art collection featuring artwork inspired by hope, healing, and transformation.">
+    <meta property="og:url" content="https://timmsyart.github.io/Files/recovery-art.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/Recovery_pic1.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://timmsyart.github.io/Files/recovery-art.html">
+    
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="gallery-styles.css?v=8">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">Timmsy's Art</h1>
+            <button class="menu-toggle" id="menuToggle">Menu</button>
+            <nav class="nav" id="mainNav">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="#" class="nav-link">Gallery</a>
+                    <div class="submenu">
+                        <a href="dc-characters.html" class="submenu-link">DC Characters</a>
+                        <a href="marvel-characters.html" class="submenu-link">Marvel Characters</a>
+                        <a href="music-legends.html" class="submenu-link">Music Legends</a>
+                        <a href="recovery-art.html" class="submenu-link active">Recovery Art</a>
+                        <a href="miscellaneous.html" class="submenu-link">Miscellaneous</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#about" class="nav-link">About the Artist</a>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact Me</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Recovery Art</h2>
+                <p class="hero-subtitle">Art inspired by hope, healing, and transformation</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <h2 class="section-title">The Collection</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/Escape from the Clutches of Addiction.jpg" alt="Escape from the Clutches of Addiction" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <button class="view-btn">View Full Size</button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3 class="gallery-title">Escape from the Clutches of Addiction</h3>
+                            <p class="gallery-medium">Mixed Media</p>
+                        </div>
+                        <div class="gallery-notes">
+                            <div class="notes-preview">
+                                <p class="notes-text-preview">From my perspective, this image represents the moment of breaking free. The hands gripping my head and dragging me backward symbolise addiction's constant pull—its pressure, control, and refusal to let go.</p>
+                                <button class="expand-notes-btn">Read More</button>
+                            </div>
+                            <div class="notes-full" style="display: none;">
+                                <p class="notes-text-full">From my perspective, this image represents the moment of breaking free. The hands gripping my head and dragging me backward symbolise addiction's constant pull—its pressure, control, and refusal to let go. Turning my face forward and opening my mouth is an act of resistance: a choice to speak, to breathe, to move in a different direction. The words "This way to escape the clutches of addiction" point toward hope, but not an easy escape—one that requires effort, pain, and determination. It captures the transition where addiction is still close behind, but no longer in control, and where reclaiming my voice and direction becomes the first step toward a life without it.</p>
+                                <button class="collapse-notes-btn">Read Less</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-description">
+            <div class="container">
+                <h2 class="section-title">About This Collection</h2>
+                <div class="description-content">
+                    <p>This collection will feature artwork inspired by themes of recovery, hope, and personal transformation. Each piece will explore the journey of healing and the power of resilience.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 LD Gallery / Timmsy's Art. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="menu-script.js"></script>
+    <script>
+        // Full size image viewer
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const img = this.closest('.gallery-item').querySelector('.gallery-image');
+                const modal = document.createElement('div');
+                modal.className = 'image-modal';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <img src="${img.src}" alt="${img.alt}" class="modal-image">
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                
+                modal.querySelector('.close-modal').addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+                
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        document.body.removeChild(modal);
+                    }
+                });
+            });
+        });
+
+        // Expandable Notes Functionality
+        document.querySelectorAll('.expand-notes-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const notesSection = this.closest('.gallery-notes');
+                const preview = notesSection.querySelector('.notes-preview');
+                const full = notesSection.querySelector('.notes-full');
+                
+                preview.style.display = 'none';
+                full.style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.collapse-notes-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const notesSection = this.closest('.gallery-notes');
+                const preview = notesSection.querySelector('.notes-preview');
+                const full = notesSection.querySelector('.notes-full');
+                
+                full.style.display = 'none';
+                preview.style.display = 'block';
+                
+                // Scroll to top of notes section for better UX
+                notesSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+        });
+    </script>
+</body>
+</html>

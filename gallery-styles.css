@@ -65,7 +65,7 @@
 }
 
 .gallery-title {
-    font-family: 'Old English Text MT', 'Blackletter', serif;
+    font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
     font-size: 1.5rem;
     font-weight: 600;
     color: #169B62;
@@ -76,6 +76,78 @@
     color: #666;
     font-size: 1rem;
     font-weight: 400;
+}
+
+/* Gallery Notes Section */
+.gallery-notes {
+    padding: 0 2rem 2rem 2rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 1rem;
+}
+
+.notes-preview,
+.notes-full {
+    margin-top: 1rem;
+}
+
+.notes-text-preview,
+.notes-text-full {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+.notes-text-full {
+    margin-bottom: 1rem;
+}
+
+.notes-text-full a {
+    color: #169B62;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.notes-text-full a:hover {
+    color: #0d7a4a;
+}
+
+.expand-notes-btn,
+.collapse-notes-btn {
+    background-color: transparent;
+    color: #169B62;
+    border: 1px solid #169B62;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Copperplate Gothic Bold', 'Copperplate', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.expand-notes-btn:hover,
+.collapse-notes-btn:hover {
+    background-color: #169B62;
+    color: #fff;
+}
+
+.notes-full {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Collection Description Section */
@@ -208,6 +280,21 @@
     
     .description-content p {
         font-size: 1rem;
+    }
+    
+    .gallery-notes {
+        padding: 0 1rem 1rem 1rem;
+    }
+    
+    .notes-text-preview,
+    .notes-text-full {
+        font-size: 0.9rem;
+    }
+    
+    .expand-notes-btn,
+    .collapse-notes-btn {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
     }
 }
 

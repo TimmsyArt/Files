@@ -1,0 +1,55 @@
+Create 5 distinct gallery pages as opposed to the current 3 sub-gallery pages. 
+
+1. DC Characters
+
+2. Marvel Characters
+
+3. Music Legends
+
+4. Recovery Art
+
+5. Miscellaneous
+
+Place all of the current pictures within the "Batman vs Joker" page into the "DC Characters" page.
+Move all of the pictures within "Rolling Stones" and "The Who" pages within the "Music Legends" page.
+
+Instead of the menu appearing across the top of the page, create a single "Menu" button to the top right of the page.  
+The font for the menu is "Copperplate Gothic Bold".  
+The menu should extends to 3 options:  "Gallery", "About the Artist" and "Contact Me" options.  
+A sub-menu of "Gallery" contains these 5 pages:  DC Characters, Marvel Characters, Music Legends, Recovery Art and Miscellaneous
+
+Fonts:
+
+On desktop internet browsers, "Old English Text MT" will be the key font on all of the pages.  
+Menu and Sub-Menu:  Copperplate Gothic Bold 
+
+Substitute Fonts supported by Google Chrome mobile browsers: "UnifrakturMaguntia"
+
+
+Problem:
+"Old English Text MT" font is not available on mobile devices
+This caused the pages to fall back to default system fonts on mobile
+Solution:
+✅ Added Google Font: UnifrakturMaguntia - A blackletter/Old English style web font that works across all devices
+✅ Updated all HTML files with Google Font link
+
+Desktop Windows/Mac - Uses "Old English Text MT" (the original working font)
+Mobile devices - Uses "UnifrakturMaguntia" (Google Font fallback)
+
+UnifrakturMaguntia is based on Peter Wiegel’s font Berthold Mainzer Fraktur which is in turn based on a 1901 typeface by Carl Albert Fahrenwaldt. While the glyph design of Peter Wiegel’s font has hardly been changed at all, UnifrakturMaguntia uses smart font technologies for displaying the font’s ligatures (OpenType, Apple Advanced Typography and SIL Graphite). An experimental feature is the distinction of good blackletter typography between required ligatures ‹ch, ck, ſt, tz› that must be kept when letterspacing is increased, and regular ligatures (for instance, ‹fi, fl›) that are broken up when letterspacing is increased.
+
+UnifrakturMaguntia is optimized for @font-face linking on the internet by combining standards compliance with a permissive license.
+
+UnifrakturMaguntia has first been published in 2010 at UnifrakturMaguntia. It has been edited with FontForge, the libre outline font editor. OpenType features have been added with FontForge directly. AAT features have been added with ftxenhancer of the Apple Font Tools. Graphite has been added with the Graphite Compiler. For more information about AAT and Graphite, you may want to check out the Free Tengwar Font Project: Adding Graphite and AAT to a font.
+
+https://fontmeme.com/fonts/oldenglish-fonts-collection/1/
+
+https://www.fontspace.com/category/gothic,old-english
+
+
+
+The font for every entry within the menu and sub-menus should be "Copperplate Gothic Bold".  
+
+The menu should extend to 3 options:  "Gallery", "About the Artist" and "Contact Me" options and font of "Copperplate Gothic Bold.  
+There is no sub-menu of the main menu corresponding to the following: "A sub-menu of "Gallery" should contain these 5 pages:  DC Characters, Marvel Characters, Music Legends, Recovery Art and Miscellaneous".  The font of "Copperplate Gothic Bold" is required.
+

@@ -3,21 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batman vs The Joker - Timmsy's Art</title>
-    <link rel="stylesheet" href="styles.css?v=3">
-    <link rel="stylesheet" href="gallery-styles.css?v=3">
+    <title>DC Characters Collection - Batman & Joker Art | Timmsy's Art</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Timmsy's DC Characters collection featuring Batman, The Joker, and iconic DC Universe heroes and villains. Contemporary mixed media artwork celebrating comic book legends.">
+    <meta name="keywords" content="DC characters, Batman art, Joker art, DC Universe, comic book art, superhero art, villain art, Batman vs Joker, Heath Ledger Joker, contemporary art, mixed media">
+    <meta name="author" content="Timmsy's Art">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="DC Characters Collection - Batman & Joker Art | Timmsy's Art">
+    <meta property="og:description" content="Explore Timmsy's DC Characters collection featuring Batman, The Joker, and iconic DC Universe heroes and villains.">
+    <meta property="og:url" content="https://timmsyart.github.io/Files/dc-characters.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/OIP.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://timmsyart.github.io/Files/dc-characters.html">
+    
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="gallery-styles.css?v=7">
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container header-container">
             <h1 class="logo">Timmsy's Art</h1>
-            <nav class="nav">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="batman.html" class="nav-link active">Batman vs Joker</a>
-                <a href="rolling-stones.html" class="nav-link">Rolling Stones</a>
-                <a href="the-who.html" class="nav-link">The Who</a>
-                <a href="index.html#about" class="nav-link">About</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
+            <button class="menu-toggle" id="menuToggle">Menu</button>
+            <nav class="nav" id="mainNav">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </div>
+                <div class="nav-item has-submenu">
+                    <a href="#" class="nav-link">Gallery</a>
+                    <div class="submenu">
+                        <a href="dc-characters.html" class="submenu-link active">DC Characters</a>
+                        <a href="marvel-characters.html" class="submenu-link">Marvel Characters</a>
+                        <a href="music-legends.html" class="submenu-link">Music Legends</a>
+                        <a href="recovery-art.html" class="submenu-link">Recovery Art</a>
+                        <a href="miscellaneous.html" class="submenu-link">Miscellaneous</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#about" class="nav-link">About the Artist</a>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact Me</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -25,8 +58,8 @@
     <main class="main">
         <section class="hero">
             <div class="container">
-                <h2 class="hero-title">Batman vs The Joker</h2>
-                <p class="hero-subtitle">The eternal battle between hero and villain captured in art</p>
+                <h2 class="hero-title">DC Characters</h2>
+                <p class="hero-subtitle">Batman, The Joker, and the heroes and villains of the DC Universe</p>
             </div>
         </section>
 
@@ -106,8 +139,8 @@
             <div class="container">
                 <h2 class="section-title">About This Collection</h2>
                 <div class="description-content">
-                    <p>This collection explores the complex relationship between Batman and The Joker, two iconic characters whose destinies are forever intertwined. Each piece captures a different aspect of their eternal struggle - from the classic heroism of Batman to the chaotic madness of The Joker.</p>
-                    <p>The artworks blend traditional comic book aesthetics with contemporary artistic techniques, creating a unique visual narrative that honors the legacy of these legendary characters while presenting them in a fresh, artistic light.</p>
+                    <p>This collection explores the iconic characters of the DC Universe, focusing on the eternal struggle between Batman and The Joker. Each piece captures the duality of heroism and villainy that defines these legendary characters.</p>
+                    <p>The artworks blend traditional comic book aesthetics with contemporary artistic techniques, creating a unique visual narrative that honors the legacy of DC's most beloved characters.</p>
                 </div>
             </div>
         </section>
@@ -119,31 +152,8 @@
         </div>
     </footer>
 
+    <script src="menu-script.js"></script>
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Add hover effects for gallery items
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
         // Full size image viewer
         document.querySelectorAll('.view-btn').forEach(btn => {
             btn.addEventListener('click', function() {
@@ -172,6 +182,3 @@
     </script>
 </body>
 </html>
-
-
-

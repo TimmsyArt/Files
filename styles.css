@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Old English Text MT', 'Blackletter', serif;
+    font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
     line-height: 1.6;
     color: #333;
     background-color: #fafafa;
@@ -31,49 +31,151 @@ body {
 
 .header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1rem 20px;
+    padding: 0.5rem 20px; /* Further reduced from 0.8rem to 0.5rem */
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+.header-container {
+    position: relative;
 }
 
 .logo {
-    font-family: 'Old English Text MT', 'Blackletter', serif;
-    font-size: 2rem;
+    font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
+    font-size: 4.5rem; /* Slightly reduced from 5.0rem for more compact header */
     font-weight: 700;
     color: #169B62;
     text-decoration: none;
+    text-align: center;
+    flex: 1;
 }
 
+/* Menu Toggle Button */
+.menu-toggle {
+    font-family: 'Copperplate Gothic Bold', 'Copperplate', serif;
+    font-size: 0.8rem; /* Reduced by 20% from 1rem */
+    font-weight: bold;
+    color: #169B62;
+    background-color: transparent;
+    border: 2px solid #169B62;
+    padding: 0.4rem 0.8rem; /* Further reduced padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 20px; /* Position absolutely on the left */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-toggle:hover {
+    background-color: #169B62;
+    color: #fff;
+}
+
+.menu-toggle.active {
+    background-color: #169B62;
+    color: #fff;
+}
+
+/* Navigation Menu */
 .nav {
-    display: flex;
-    gap: 2rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-item {
+    position: relative;
 }
 
 .nav-link {
+    display: block;
     text-decoration: none;
     color: #555;
-    font-weight: 400;
-    transition: color 0.3s ease;
-    position: relative;
+    font-family: 'Copperplate Gothic Bold', 'Copperplate', serif;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .nav-link:hover {
     color: #169B62;
+    background-color: #f8f9fa;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #169B62;
-    transition: width 0.3s ease;
+/* Submenu Styles */
+.has-submenu .nav-link::after {
+    content: ' ▼';
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
 }
 
-.nav-link:hover::after {
-    width: 100%;
+.has-submenu.submenu-active .nav-link::after {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    display: none;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin: 0.5rem 0.5rem 0.5rem 3.5rem;
+    overflow: hidden;
+}
+
+.has-submenu.submenu-active .submenu {
+    display: block;
+}
+
+.submenu-link {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    font-family: 'Copperplate Gothic Bold', 'Copperplate', serif;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.submenu-link:hover {
+    color: #169B62;
+    background-color: #fff;
+    border-left-color: #169B62;
+}
+
+.submenu-link.active {
+    color: #169B62;
+    font-weight: 600;
+    background-color: #fff;
+    border-left-color: #169B62;
 }
 
 /* Main Content */
@@ -85,13 +187,26 @@ body {
 .hero {
     background: linear-gradient(135deg, #169B62 0%, #0d6b3f 100%);
     color: white;
-    padding: 4rem 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Ensure adequate height for vertical centering */
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem 20px; /* Add some padding back for breathing room */
 }
 
 .hero-title {
-    font-family: 'Old English Text MT', 'Blackletter', serif;
-    font-size: 3rem;
+    font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
+    font-size: 2.2rem; /* Reduced to be smaller than header */
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -104,7 +219,7 @@ body {
 
 /* Section Titles */
 .section-title {
-    font-family: 'Old English Text MT', 'Blackletter', serif;
+    font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
     font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
@@ -208,7 +323,7 @@ body {
 }
 
 .collection-title {
-    font-family: 'Old English Text MT', 'Blackletter', serif;
+    font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
     font-size: 1.6rem;
     font-weight: 600;
     color: #169B62;
@@ -219,6 +334,13 @@ body {
     color: #666;
     font-size: 1rem;
     line-height: 1.5;
+}
+
+/* Center Miscellaneous Collection */
+.miscellaneous-centered {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 400px;
 }
 
 .art-item {
@@ -290,7 +412,7 @@ body {
 }
 
 .art-title {
-    font-family: 'Old English Text MT', 'Blackletter', serif;
+    font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
     font-size: 1.3rem;
     font-weight: 600;
     color: #169B62;
@@ -301,6 +423,19 @@ body {
     color: #666;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
+}
+
+/* Empty Gallery Styles */
+.empty-gallery {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.empty-message {
+    font-size: 1.3rem;
+    color: #999;
+    font-style: italic;
 }
 
 /* About Section */
@@ -367,13 +502,18 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 1rem;
+    .nav {
+        right: 0;
+        left: 0;
+        max-width: 100%;
+        margin: 1rem;
     }
     
-    .nav {
-        gap: 1.5rem;
+    .menu-toggle {
+        font-size: 0.6rem; /* Much smaller font for mobile */
+        padding: 0.2rem 0.4rem; /* Significantly reduced padding - 50% smaller */
+        width: auto; /* Allow button to size to content */
+        min-width: auto; /* Remove any minimum width constraints */
     }
     
     .hero-title {
@@ -409,6 +549,13 @@ body {
     .main {
         margin-top: 120px;
     }
+    
+    /* Mobile logo styling - keep left aligned but increase font size */
+    .logo {
+        text-align: left;
+        flex: none;
+        font-size: 2.4rem; /* Keep original mobile size */
+    }
 }
 
 @media (max-width: 480px) {
@@ -417,7 +564,11 @@ body {
     }
     
     .hero {
-        padding: 3rem 0;
+        min-height: 150px; /* Smaller height for mobile */
+    }
+    
+    .hero .container {
+        padding: 1.5rem 15px; /* Smaller padding for mobile */
     }
     
     .hero-title {

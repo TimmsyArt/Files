@@ -5,6 +5,54 @@
     box-sizing: border-box;
 }
 
+/* Content Protection Styles */
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Allow text selection for specific elements (menu, buttons, etc.) */
+.menu-toggle,
+.nav-link,
+.submenu-link,
+.view-btn,
+.expand-notes-btn,
+.collapse-notes-btn,
+button,
+input,
+textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* Prevent image dragging */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: auto;
+}
+
+/* Image protection overlay */
+.image-protection-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: transparent;
+}
+
 body {
     font-family: 'Old English Text MT', 'UnifrakturMaguntia', 'Blackletter', cursive;
     line-height: 1.6;

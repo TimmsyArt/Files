@@ -1,0 +1,33 @@
+# git-crypt encrypted files
+# Files matching these patterns will be automatically encrypted
+
+# Configuration files with sensitive data
+*.env filter=git-crypt diff=git-crypt
+*.env.local filter=git-crypt diff=git-crypt
+*.env.*.local filter=git-crypt diff=git-crypt
+config.ini filter=git-crypt diff=git-crypt
+secrets.txt filter=git-crypt diff=git-crypt
+credentials.txt filter=git-crypt diff=git-crypt
+
+# API keys and tokens
+*_token.txt filter=git-crypt diff=git-crypt
+*_pat.txt filter=git-crypt diff=git-crypt
+*_api_key.txt filter=git-crypt diff=git-crypt
+*.key filter=git-crypt diff=git-crypt
+*.pem filter=git-crypt diff=git-crypt
+
+# Personal information files
+*_personal.txt filter=git-crypt diff=git-crypt
+*_private.txt filter=git-crypt diff=git-crypt
+
+# Database files (if any)
+*.db filter=git-crypt diff=git-crypt
+*.sqlite filter=git-crypt diff=git-crypt
+
+# Backup files with sensitive data
+*_backup.env filter=git-crypt diff=git-crypt
+*_backup.key filter=git-crypt diff=git-crypt
+
+# Specific sensitive directories (if needed)
+# sensitive/** filter=git-crypt diff=git-crypt
+

@@ -13,6 +13,7 @@ credentials.txt filter=git-crypt diff=git-crypt
 *_token.txt filter=git-crypt diff=git-crypt
 *_pat.txt filter=git-crypt diff=git-crypt
 *_api_key.txt filter=git-crypt diff=git-crypt
+*_secrets.txt filter=git-crypt diff=git-crypt
 *.key filter=git-crypt diff=git-crypt
 *.pem filter=git-crypt diff=git-crypt
 

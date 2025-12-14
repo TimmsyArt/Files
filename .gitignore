@@ -38,3 +38,7 @@ desktop.ini
 *.backup
 *_backup.*
 
+# Unrelated project files
+*Job Scraper*
+
+

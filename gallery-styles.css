@@ -35,6 +35,12 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: auto;
 }
 
 .gallery-item:hover .gallery-image {
@@ -90,17 +96,28 @@
     margin-top: 1rem;
 }
 
+.notes-preview {
+    display: block;
+}
+
 .notes-text-preview,
 .notes-text-full {
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0;
     font-style: italic;
+    font-family: 'Bookman Old Style', 'Book Antiqua', 'Palatino Linotype', serif;
+    display: inline;
+}
+
+.notes-text-preview {
+    margin-right: 0.3rem;
 }
 
 .notes-text-full {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
 .notes-text-full a {
@@ -116,23 +133,34 @@
 .expand-notes-btn,
 .collapse-notes-btn {
     background-color: transparent;
-    color: #169B62;
-    border: 1px solid #169B62;
-    padding: 0.4rem 1rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    color: #007AFF;
+    border: none;
+    padding: 0;
+    margin-left: 0.2rem;
+    border-radius: 0;
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-style: normal;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Copperplate Gothic Bold', 'Copperplate', serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    font-family: 'Bookman Old Style', 'Book Antiqua', 'Palatino Linotype', serif;
+    text-transform: lowercase;
+    letter-spacing: 0;
+    text-decoration: none;
+    display: inline;
+    vertical-align: baseline;
 }
 
 .expand-notes-btn:hover,
 .collapse-notes-btn:hover {
-    background-color: #169B62;
-    color: #fff;
+    color: #0051D5;
+    text-decoration: underline;
+    text-decoration-color: #0051D5;
+}
+
+.expand-notes-btn:active,
+.collapse-notes-btn:active {
+    color: #003D9E;
 }
 
 .notes-full {
@@ -209,6 +237,12 @@
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: auto;
 }
 
 .close-modal {

@@ -23,8 +23,8 @@
     <link rel="canonical" href="https://timmsyart.github.io/Files/dc-characters.html">
     
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=7">
-    <link rel="stylesheet" href="gallery-styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="gallery-styles.css?v=11">
 </head>
 <body>
     <header class="header">
@@ -69,66 +69,26 @@
                 <div class="gallery-grid">
                     <div class="gallery-item">
                         <div class="gallery-image-container">
-                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/OIP.jpg" alt="Batman Classic" class="gallery-image">
+                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/main/Art_Examples/Marvel_Pic10.JPEG" alt="The Joker - Multiple Expressions" class="gallery-image">
                             <div class="gallery-overlay">
                                 <button class="view-btn">View Full Size</button>
                             </div>
                         </div>
                         <div class="gallery-info">
-                            <h3 class="gallery-title">Batman Classic</h3>
+                            <h3 class="gallery-title">The Joker - Multiple Expressions</h3>
                             <p class="gallery-medium">Mixed Media</p>
                         </div>
-                    </div>
+                        <div class="gallery-notes">
+                            <div class="notes-preview">
+                                <p class="notes-text-preview">This picture shows different versions of the same character, "The Joker", each with a different expression. Together, they suggest a mind that is split and unsettled.</p>
+                                <button class="expand-notes-btn">... read more</button>
+                            </div>
+                            <div class="notes-full" style="display: none;">
+                                <p class="notes-text-full">This picture shows different versions of the same character, "The Joker", each with a different expression. Together, they suggest a mind that is split and unsettled. The repeated laughing in the background gives a feeling of noise and pressure, like thoughts that won't quiet down and keep mocking or pushing from inside.<br><br>
 
-                    <div class="gallery-item">
-                        <div class="gallery-image-container">
-                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/OIP2.jpg" alt="The Batman Janus" class="gallery-image">
-                            <div class="gallery-overlay">
-                                <button class="view-btn">View Full Size</button>
+Looking at each portrayal of the Joker character, the image reflects someone struggling with their own darker thoughts and behaviours. Each face represents a different side of that struggle—anger, false confidence, loss of control, or emotional numbness. Instead of being one clear, steady person, they appear pulled in different directions by these inner voices. The picture shows how losing a sense of self can feel confusing and overwhelming, as if the person is surrounded by versions of themselves that make it harder to stay grounded or at peace.</p>
+                                <button class="collapse-notes-btn">... read less</button>
                             </div>
-                        </div>
-                        <div class="gallery-info">
-                            <h3 class="gallery-title">The Batman Janus</h3>
-                            <p class="gallery-medium">Mixed Media</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item">
-                        <div class="gallery-image-container">
-                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/OIP3.jpg" alt="Heath Ledger's Joker" class="gallery-image">
-                            <div class="gallery-overlay">
-                                <button class="view-btn">View Full Size</button>
-                            </div>
-                        </div>
-                        <div class="gallery-info">
-                            <h3 class="gallery-title">Heath Ledger's Joker</h3>
-                            <p class="gallery-medium">Mixed Media</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item">
-                        <div class="gallery-image-container">
-                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/OIP4.jpg" alt="Rivalry" class="gallery-image">
-                            <div class="gallery-overlay">
-                                <button class="view-btn">View Full Size</button>
-                            </div>
-                        </div>
-                        <div class="gallery-info">
-                            <h3 class="gallery-title">Rivalry</h3>
-                            <p class="gallery-medium">Mixed Media</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item">
-                        <div class="gallery-image-container">
-                            <img src="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/OIP5.jpg" alt="Ebuliant Joker" class="gallery-image">
-                            <div class="gallery-overlay">
-                                <button class="view-btn">View Full Size</button>
-                            </div>
-                        </div>
-                        <div class="gallery-info">
-                            <h3 class="gallery-title">Ebuliant Joker</h3>
-                            <p class="gallery-medium">Mixed Media</p>
                         </div>
                     </div>
                 </div>
@@ -153,6 +113,7 @@
     </footer>
 
     <script src="menu-script.js"></script>
+    <script src="protection.js"></script>
     <script>
         // Full size image viewer
         document.querySelectorAll('.view-btn').forEach(btn => {
@@ -177,6 +138,32 @@
                         document.body.removeChild(modal);
                     }
                 });
+            });
+        });
+
+        // Expandable Notes Functionality
+        document.querySelectorAll('.expand-notes-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const notesSection = this.closest('.gallery-notes');
+                const preview = notesSection.querySelector('.notes-preview');
+                const full = notesSection.querySelector('.notes-full');
+                
+                preview.style.display = 'none';
+                full.style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.collapse-notes-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const notesSection = this.closest('.gallery-notes');
+                const preview = notesSection.querySelector('.notes-preview');
+                const full = notesSection.querySelector('.notes-full');
+                
+                full.style.display = 'none';
+                preview.style.display = 'block';
+                
+                // Scroll to top of notes section for better UX
+                notesSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             });
         });
     </script>

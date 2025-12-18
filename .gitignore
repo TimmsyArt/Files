@@ -41,4 +41,10 @@ desktop.ini
 # Unrelated project files
 *Job Scraper*
 
+# Security documentation - DO NOT commit (exposes security architecture)
+SECURITY_*.md
+*SECURITY*.md
+ADVANCED_PROTECTION_MEASURES.md
+WEBSITE_SECURITY_IMPLEMENTATION_GUIDE.md
+SECURITY_ARCHITECTURE_REFERENCE.md
 

@@ -539,8 +539,32 @@ body {
 .footer {
     background-color: #169B62;
     color: #fff;
-    text-align: center;
     padding: 2rem 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.footer-left {
+    margin: 0;
+    opacity: 0.8;
+    text-align: center;
+    grid-column: 2;
+}
+
+.footer-right {
+    margin: 0;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    text-align: right;
+    white-space: nowrap;
+    grid-column: 3;
+    justify-self: end;
 }
 
 .footer p {
@@ -548,8 +572,33 @@ body {
     opacity: 0.8;
 }
 
+.footer a {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #00BFFF;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+    }
+    
+    .footer-right {
+        position: relative;
+        right: auto;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
     .nav {
         right: 0;
         left: 0;

@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/TimmsyArt/Files/TimmsyArt-patch-1/Timmsy_4_Chars.png">
     
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
     <header class="header">
@@ -167,13 +167,19 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 LD Gallery / Timmsy's Art. All rights reserved.</p>
+        <div class="container footer-content">
+            <p class="footer-left">&copy; <span id="copyright-year">2025</span> Timmy's Art | All Rights Reserved | <a href="terms-of-use.html" style="color: #00BFFF; font-weight: 600; text-decoration: underline; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Terms of Use</a></p>
+            <p class="footer-right" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #fff;">| A v I d Digital |</p>
         </div>
     </footer>
 
     <script src="menu-script.js"></script>
     <script src="protection.js"></script>
+    <script src="canvas-protection.js"></script>
+    <script>
+        // Auto-update copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
     <script>
         // Add hover effects for collection items
         document.querySelectorAll('.collection-item').forEach(item => {

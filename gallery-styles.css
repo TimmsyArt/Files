@@ -1,5 +1,61 @@
 /* Gallery-specific styles for individual collection pages */
 
+/* Copyright Watermark Styles */
+.gallery-image-container::after,
+.collection-image-container::after {
+    content: '© 2025 Timmsy\'s Art';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 3px 6px;
+    font-size: 0.49rem;
+    font-weight: 600;
+    border-radius: 2px;
+    z-index: 10;
+    pointer-events: none;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.4px;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .gallery-image-container::after,
+    .collection-image-container::after {
+        font-size: 0.42rem;
+        padding: 2px 4px;
+        bottom: 8px;
+        right: 8px;
+    }
+}
+
+/* Copyright notice section */
+.copyright-notice {
+    background-color: #f8f9fa;
+    border-top: 2px solid #169B62;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.copyright-notice p {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    font-family: Arial, sans-serif;
+}
+
+.copyright-notice a {
+    color: #169B62;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.copyright-notice a:hover {
+    text-decoration: underline;
+}
+
 /* Gallery Grid - 2 pictures per row */
 .gallery-grid {
     display: grid;
@@ -220,20 +276,30 @@
     justify-content: center;
     z-index: 2000;
     padding: 2rem;
+    padding-left: 120px; /* Space for back button on the left */
 }
 
 .modal-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 85%;
+    max-height: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.modal-image {
+.modal-image-container {
+    position: relative;
     max-width: 100%;
     max-height: 100%;
+    display: inline-block;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -243,29 +309,65 @@
     -o-user-drag: none;
     user-drag: none;
     pointer-events: auto;
+    display: block;
 }
 
-.close-modal {
+/* Copyright watermark for modal */
+.modal-image-container::after {
+    content: '© 2025 Timmsy\'s Art';
     position: absolute;
-    top: -40px;
-    right: 0;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
-    font-size: 2rem;
+    padding: 6px 8px;
+    font-size: 0.63rem;
+    font-weight: 600;
+    border-radius: 3px;
+    z-index: 10;
+    pointer-events: none;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.4px;
+    opacity: 0.95;
+}
+
+
+/* Back button for modal - positioned outside image on the left */
+.back-modal {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    width: 40px;
-    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 2001;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.close-modal:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.back-modal:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.back-modal::before {
+    content: '← ';
+    margin-right: 5px;
+    font-size: 1.2rem;
 }
 
 /* Responsive Design for Gallery Pages */
@@ -285,13 +387,30 @@
     
     .image-modal {
         padding: 1rem;
+        padding-left: 90px; /* Space for back button on mobile */
     }
     
-    .close-modal {
-        top: -30px;
-        font-size: 1.5rem;
-        width: 30px;
-        height: 30px;
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    
+    .modal-image {
+        max-height: 80vh;
+    }
+    
+    .modal-image-container::after {
+        font-size: 0.53rem;
+        padding: 4px 7px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .back-modal {
+        top: 10px;
+        left: 10px;
+        font-size: 0.85rem;
+        padding: 10px 16px;
     }
 }
 
